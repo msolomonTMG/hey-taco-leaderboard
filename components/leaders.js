@@ -6,16 +6,18 @@ Vue.component('leader-card', {
     }
   },
   template:`
-    <div class="card mt-2" style="width: 18rem;">
+    <div class="card mt-2">
       <div class="card-body">
         <div class="row">
-          <div class="col">
-            <img :src=leader.avatar class="rounded-circle">
-          </div>
-          <div class="col">
-            <span class="align-middle">{{leader.username}}</span>
-            <span class="align-middle">{{leader.count}}</span>
+          <div class="col-10">
+            <img :src=leader.avatar class="rounded-circle avatar float-left">
+            <h4 class="card-title">{{leader.username}}</h4>
             <span v-for="taco in tacos">🌮</span>
+          </div>
+          <div class="col-2">
+            <h4 class="vertical-align float-right">
+              {{leader.count}}
+            </h4>
           </div>
         </div>
       </div>
