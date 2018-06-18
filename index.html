@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <title>Group Nine Taco Leaderboard</title>
+    <style>
+      .vertical-align {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .leaderboard-move {
+        transition: transform 1.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-4">
+            <h1 class="vertical-align">Taco Stand</h1>
+          </div>
+          <div class="col-md-4">
+            <transition-group name="leaderboard" tag="div">
+              <leader-card
+                v-for="leader in leaders"
+                v-bind:leader="leader"
+                v-bind:key="leader.username">
+              </leader-card>
+            </transition-group>
+            <!-- <div id="leaderboard">
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- custom js -->
+    <script src="app.js"></script>
+    <script src="components/leaders.js"></script>
+  
+  </body>
+</html>
