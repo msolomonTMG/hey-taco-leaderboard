@@ -7,33 +7,10 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
     <title>Group Nine Taco Leaderboard</title>
-    <style>
-      .avatar {
-        padding-right: 10px;
-      }
-      .card {
-        -webkit-box-shadow: 0px 4px 8px 1px rgba(0,0,0,0.42);
-        -moz-box-shadow: 0px 4px 8px 1px rgba(0,0,0,0.42);
-        box-shadow: 0px 4px 8px 1px rgba(0,0,0,0.42);
-      }
-      .vertical-align {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-      .leaderboard-move {
-        transition: transform 1.5s;
-      }
-      /* li:first-child > .card {
-        background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
-        color: white;
-      } */
-      ul {
-        list-style: none;
-      }
-    </style>
   </head>
   <body>
     <div id="app">
@@ -52,8 +29,6 @@
                 v-bind:key="leader.username">
               </leader-card>
             </transition-group>
-            <!-- <div id="leaderboard">
-            </div> -->
           </div>
         </div>
       </div>
