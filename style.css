@@ -23,6 +23,11 @@ h1 {
   transition: transform 1.5s;
 }
 
+img {
+  max-width: 72px;
+  max-height: 72px;
+}
+
 ul {
   list-style: none;
 }
