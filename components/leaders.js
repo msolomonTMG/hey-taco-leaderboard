@@ -6,21 +6,23 @@ Vue.component('leader-card', {
     }
   },
   template:`
-    <div class="card mt-2">
-      <div class="card-body">
-        <div class="row">
-          <div class="col-10">
-            <img :src=leader.avatar class="rounded-circle avatar float-left">
-            <h4 class="card-title">{{leader.username}}</h4>
-            <span v-for="taco in tacos">🌮</span>
-          </div>
-          <div class="col-2">
-            <h4 class="vertical-align float-right">
-              {{leader.count}}
-            </h4>
+    <li>
+      <div class="card mt-2">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-10">
+              <img :src=leader.avatar class="rounded-circle avatar float-left">
+              <h4 class="card-title">{{leader.username}}</h4>
+              <span v-for="taco in tacos">🌮</span>
+            </div>
+            <div class="col-2">
+              <h4 class="vertical-align float-right">
+                {{leader.count}}
+              </h4>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </li>
   `
 })
