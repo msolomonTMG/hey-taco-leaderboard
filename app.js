@@ -8,7 +8,7 @@ var app = new Vue({
     
     setInterval(function() {
       this.loadLeaderboard()
-    }.bind(this), 10000)
+    }.bind(this), 30000)
   },
   methods: {
     loadLeaderboard: function() {
