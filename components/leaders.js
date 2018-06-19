@@ -3,6 +3,9 @@ Vue.component('leader-card', {
   computed: {
     tacos: function() {
       return new Array(parseInt(this.leader.count)) //empty array for taco count
+    },
+    tacoImageLocation: function() {
+      return window.location.href + 'taco.png'
     }
   },
   template:`
@@ -14,7 +17,7 @@ Vue.component('leader-card', {
               <img :src=leader.avatar class="rounded-circle avatar float-left">
               <h4 class="card-title">{{leader.username}}</h4>
               <span v-for="taco in tacos">
-                <img src="/taco.png" height="18px" width="21px">
+                <img :src=tacoImageLocation height="18px" width="21px">
               </span>
             </div>
             <div class="col-2">
