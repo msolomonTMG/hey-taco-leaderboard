@@ -13,7 +13,9 @@ Vue.component('leader-card', {
             <div class="col-10">
               <img :src=leader.avatar class="rounded-circle avatar float-left">
               <h4 class="card-title">{{leader.username}}</h4>
-              <span v-for="taco in tacos">🌮</span>
+              <span v-for="taco in tacos">
+                <img src="/taco.png" height="18px" width="21px">
+              </span>
             </div>
             <div class="col-2">
               <h4 class="vertical-align float-right">
