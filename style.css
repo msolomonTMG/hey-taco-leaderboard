@@ -23,6 +23,16 @@ h1 {
 .leaderboard-move {
   transition: transform 1.5s;
 }
+.taco-list-item {
+  display: inline-block;
+}
+.taco-list-enter-active, .list-leave-active {
+  transition: all 3s;
+}
+.taco-list-enter, .taco-list-leave-to /* .list-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(30px);
+}
 
 img {
   max-width: 72px;
