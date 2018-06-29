@@ -14,21 +14,23 @@
   </head>
   <body>
     <div id="app">
-      <div class="container pt-5">
-        <div class="row">
-          <div class="col-md-4 view-height-100">
-            <h1 class="vertical-align text-center">Group Nine 
-              <hr style="width:50%"> Taco Leaderboard
-            </h1>
-          </div>
-          <div class="col-md-8">
-            <transition-group name="leaderboard" tag="ul">
-              <leader-card
-                v-for="leader in leaders"
-                v-bind:leader="leader"
-                v-bind:key="leader.username">
-              </leader-card>
-            </transition-group>
+      <div class="wrapper">
+        <div class="container pt-5">
+          <div class="row">
+            <div class="col-md-4 view-height-100">
+              <h1 class="vertical-align text-center">Group Nine 
+                <hr style="width:50%"> Taco Leaderboard
+              </h1>
+            </div>
+            <div class="col-md-8">
+              <transition-group name="leaderboard" tag="ul">
+                <leader-card
+                  v-for="leader in leaders"
+                  v-bind:leader="leader"
+                  v-bind:key="leader.username">
+                </leader-card>
+              </transition-group>
+            </div>
           </div>
         </div>
       </div>
