@@ -33,6 +33,9 @@ h1 {
   opacity: 0;
   transform: translateY(30px);
 }
+.view-height-100 {
+  height: 100vh;
+}
 
 img {
   max-width: 72px;
