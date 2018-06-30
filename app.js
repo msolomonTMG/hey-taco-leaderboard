@@ -3,6 +3,18 @@ var app = new Vue({
   data: {
     leaders: []
   },
+  computed: {
+    numDays: function() {
+      let urlParams = new URLSearchParams(window.location.search);
+      
+      if(urlParams.has('days')) {
+        return urlParams.get('days')
+      } else {
+        return '1'
+      }
+      
+    }
+  },
   created: function () {
     this.loadLeaderboard()
     
@@ -13,7 +25,7 @@ var app = new Vue({
   methods: {
     loadLeaderboard: function() {
       console.log('fetching data')
-      fetch('https://cors-anywhere.herokuapp.com/https://www.heytaco.chat/api/v1/json/leaderboard/T376NB673?days=1')
+      fetch('https://cors-anywhere.herokuapp.com/https://www.heytaco.chat/api/v1/json/leaderboard/T376NB673?days=' + this.numDays)
       //fetch('https://heytacoleaderboard.firebaseio.com/.json')
       .then(response => response.json())
       .then(data => {

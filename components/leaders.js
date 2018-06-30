@@ -5,7 +5,7 @@ Vue.component('leader-card', {
       return new Array(parseInt(this.leader.count)) //empty array for taco count
     },
     tacoImageLocation: function() {
-      return window.location.href + 'taco.png'
+      return window.location.href.split('?')[0] + 'taco.png'
     }
   },
   template:`
