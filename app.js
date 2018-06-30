@@ -13,7 +13,7 @@ var app = new Vue({
   methods: {
     loadLeaderboard: function() {
       console.log('fetching data')
-      fetch('https://cors-anywhere.herokuapp.com/https://www.heytaco.chat/api/v1/json/leaderboard/T376NB673?days=1')
+      fetch('https://www.heytaco.chat/api/v1/json/leaderboard/T376NB673?days=1')
       //fetch('https://heytacoleaderboard.firebaseio.com/.json')
       .then(response => response.json())
       .then(data => {
