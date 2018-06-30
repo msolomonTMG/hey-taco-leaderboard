@@ -45,6 +45,10 @@ h1 {
   animation: GradientWave 700s ease infinite;
 }
 
+::-webkit-scrollbar { 
+  display: none; 
+}
+
 @-webkit-keyframes GradientWave {
   0%{background-position:22% 0%}
   50%{background-position:79% 100%}
