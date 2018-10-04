@@ -2,7 +2,7 @@ Vue.component('leader-card', {
   props: ['leader'],
   computed: {
     tacos: function() {
-      return new Array(parseInt(this.leader.count)) //empty array for taco count
+      return new Array(parseInt(this.leader.sum)) //empty array for taco sum
     },
     tacoImageLocation: function() {
       return window.location.href.split('?')[0] + 'taco.png'
@@ -24,7 +24,7 @@ Vue.component('leader-card', {
             </div>
             <div class="col-2">
               <h4 class="vertical-align float-right">
-                {{leader.count}}
+                {{leader.sum}}
               </h4>
             </div>
           </div>
