@@ -29,7 +29,7 @@ var app = new Vue({
       //fetch('https://heytacoleaderboard.firebaseio.com/.json')
       .then(response => response.json())
       .then(data => {
-        this.leaders = data.leaderboard.sort(function(a,b) {return (parseInt(b.count) > parseInt(a.count)) ? 1 : ((parseInt(a.count) > parseInt(b.count)) ? -1 : 0);} );
+        this.leaders = data.leaderboard.sort(function(a,b) {return (parseInt(b.sum) > parseInt(a.sum)) ? 1 : ((parseInt(a.sum) > parseInt(b.sum)) ? -1 : 0);} );
         console.log(this.leaders)
       })
     }
