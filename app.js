@@ -29,8 +29,7 @@ var app = new Vue({
       //fetch('https://heytacoleaderboard.firebaseio.com/.json')
       .then(response => response.json())
       .then(data => {
-        //sort the leaderboard by count when in dev
-        this.leaders = data.leaderboard//.sort(function(a,b) {return (parseInt(b.count) > parseInt(a.count)) ? 1 : ((parseInt(a.count) > parseInt(b.count)) ? -1 : 0);} );
+        this.leaders = data.leaderboard.sort(function(a,b) {return (parseInt(b.count) > parseInt(a.count)) ? 1 : ((parseInt(a.count) > parseInt(b.count)) ? -1 : 0);} );
         console.log(this.leaders)
       })
     }
